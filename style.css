@@ -207,14 +207,18 @@ button:active {
 
 .tasks-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-template-rows: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 0 2rem;
 }
 
 .task {
     display: grid;
-    grid-template-columns: 1fr 10fr;
+    grid-template-columns: 0.2fr 10fr;
     grid-template-rows: 4fr 1fr;
+    border: grey 1px solid;
+    border-radius: 5px;
     h4 {
         font-size: 1rem;
     }
@@ -226,10 +230,12 @@ button:active {
 
 .color-division {
     grid-area: 1 / 1 / -1 / 2;
+    background-color: #b8790c;
 }
 
 .task-details {
     grid-area: 1 / 2 / 2 / -1;
+    padding: 0 1rem;
 }
 
 .task-actions {
@@ -237,4 +243,8 @@ button:active {
     display: flex;
     justify-content: flex-end;
     padding: 0 0.5rem;
+}
+
+.main-content h3 {
+    padding-left: 2rem;
 }
