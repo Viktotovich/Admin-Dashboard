@@ -80,12 +80,20 @@ svg {
     > input {
         flex: 4;
         margin-left: 2rem;
-        border-radius: 5px;
+        border-radius: 20px;
+        padding-left: 10px;
+        background-color: #fafaf9;
+        border: 1px solid gainsboro;
     }
 
     > svg {
         flex: 1;
     };
+}
+
+.search-bar > svg:hover {
+    cursor: pointer;
+    fill: #f59e0b;
 }
 
 .profile-container > svg {
@@ -94,9 +102,15 @@ svg {
 
 .profile-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex: 1;
+}
+
+
+.profile-container > svg:hover {
+    fill: #f59e0b;
+    cursor: pointer;
 }
 
 #notification {
@@ -129,6 +143,11 @@ img {
     max-height: 45px;
 }
 
+img:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
 .uname {
     font-weight: 600;
 }
@@ -157,3 +176,25 @@ img {
     }
 }
 
+button {
+    appearance: none;
+    background-color: #f59e0b;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 14px;
+    margin: 0 0.2rem;
+    color: #1f2937;
+}
+
+button:hover {
+    background-color: #c4800b;
+    color: white;
+    border: #fef3c7 1px solid;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #b8790c;
+    color: white;
+    box-shadow: 0 0 1px gray;
+}
