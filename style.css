@@ -10,18 +10,64 @@ body {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
+    margin: 0;
 }
 
 .aside {
     grid-area: 1 / 1 / -1 / 2;
+    display: grid;
+    grid-template-rows: 2fr 2fr 5fr ;
+    grid-template-columns: 1fr;
+    background-color: #fef3c7;
 }
 
 .header {
     grid-area: 1 / 2 / 3 / -1;
-    display: grid;
+    display: flex;
+    flex-direction: column;
 }
 
 .content-body {
     grid-area: 2 / 2 / -1 / -1;
 }
 
+.title-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: 1 / 1 / 2 / 2;
+
+    > svg {
+        max-width: 15%;
+        max-height: 20%;
+    }
+}
+
+.menu-svg-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+svg {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.menu-top {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.menu-bottom {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.header-top {
+    display: flex;
+}
+
+.search-bar {
+    display: flex;
+    > input {
+        flex: 1;
+    }
+}
