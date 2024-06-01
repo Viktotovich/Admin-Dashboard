@@ -26,6 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0 3rem;
+    background-color: white;
 }
 
 .content-body {
@@ -111,6 +112,7 @@ svg {
     bottom: 12px;
     right: 8px;
     content: "1";
+    padding: 1px;
     color: white;
     font-size: 0.7rem;
     background-color: red;
@@ -130,3 +132,28 @@ img {
 .uname {
     font-weight: 600;
 }
+
+.header-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    > div {
+        font-size: 0.6em;
+        line-height: 1;
+    }
+}
+
+#goofy-image {
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.greeting-container {
+    display: flex;
+    align-items: center;
+    > .welcome-message {
+        padding-left: 1rem;
+    }
+}
+
