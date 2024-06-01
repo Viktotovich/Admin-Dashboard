@@ -8,7 +8,7 @@ body {
     background-image: linear-gradient(to bottom right, #fff7eda6, white);
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 6fr;
     margin: 0;
 }
 
@@ -21,11 +21,12 @@ body {
 }
 
 .header {
-    grid-area: 1 / 2 / 3 / -1;
+    grid-area: 1 / 2 / 2 / -1;
     display: flex;
     flex-direction: column;
     padding: 0 3rem;
-    background-color: white;
+    background-color: #fafaf9;
+    border-bottom: gainsboro 1px solid;
 }
 
 .content-body {
@@ -44,9 +45,27 @@ body {
     }
 }
 
+.title-container {
+    font-size: 0.7rem;
+    > h1 {
+        padding-left: 1.2rem;
+    }
+}
+
 .menu-svg-wrapper {
     display: flex;
     align-items: center;
+    margin-left: 5px;
+}
+
+.menu-svg-wrapper:hover {
+    background-color: #b8790c28;
+    cursor: pointer;
+    fill: #b8790c ;
+}
+
+.menu-svg-wrapper > .menu-item {
+    padding-left: 1.2rem;
 }
 
 svg {
@@ -125,7 +144,7 @@ svg {
     bottom: 12px;
     right: 8px;
     content: "1";
-    padding: 1px;
+    padding: 1.5px;
     color: white;
     font-size: 0.7rem;
     background-color: red;
@@ -203,6 +222,7 @@ button:active {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr;
+    background-color: white;
 }
 
 .tasks-container {
@@ -239,10 +259,16 @@ button:active {
 }
 
 .task-actions {
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: 2 / 2 / 3 / 2;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     padding: 0 0.5rem;
+    > svg {
+        max-width: 20px;
+        max-height: 20px;
+        margin: 3px;
+    }
 }
 
 .main-content h3 {
