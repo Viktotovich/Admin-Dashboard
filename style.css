@@ -6,9 +6,8 @@ body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #1f2937;
     background-image: linear-gradient(to bottom right, #fff7eda6, white);
-    
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 4fr;
     margin: 0;
 }
@@ -204,4 +203,38 @@ button:active {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr;
+}
+
+.tasks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.task {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: 4fr 1fr;
+    h4 {
+        font-size: 1rem;
+    }
+}
+
+.task  h4 ~ div {
+    font-size: 0.75em;
+}
+
+.color-division {
+    grid-area: 1 / 1 / -1 / 2;
+}
+
+.task-details {
+    grid-area: 1 / 2 / 2 / -1;
+}
+
+.task-actions {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 0.5rem;
 }
