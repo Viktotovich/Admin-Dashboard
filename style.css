@@ -198,3 +198,10 @@ button:active {
     color: white;
     box-shadow: 0 0 1px gray;
 }
+
+/* The hardest part */
+.content-body {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+}
