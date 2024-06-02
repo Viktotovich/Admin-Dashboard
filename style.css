@@ -10,14 +10,17 @@ body {
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 6fr;
     margin: 0;
+    height: 100vh;
 }
 
 .aside {
-    grid-area: 1 / 1 / -1 / 2;
+    grid-area: 1 / 1 / 3 / 2;
     display: grid;
-    grid-template-rows: 2fr 2fr 5fr ;
+    grid-template-rows: 1fr 1fr 3fr ;
     grid-template-columns: 1fr;
-    background-color: #fef3c7;
+    background-color: #fed7aa;
+    padding-left: 1rem;
+    overflow: hidden;
 }
 
 .header {
@@ -31,6 +34,10 @@ body {
 
 .content-body {
     grid-area: 2 / 2 / -1 / -1;
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+    grid-template-rows: 1fr;
+    background-color: white;
 }
 
 .title-container {
@@ -43,6 +50,10 @@ body {
         max-width: 15%;
         max-height: 20%;
     }
+}
+
+h1 {
+    margin: 0;
 }
 
 .title-container {
@@ -64,11 +75,24 @@ body {
     fill: #b8790c ;
 }
 
+
+.log-out {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.log-out:hover {
+    background-color: #b8790c28;
+    cursor: pointer;
+    fill: red;
+}
+
 .menu-svg-wrapper:active {
     opacity: 70%;
 }
 
-.menu-svg-wrapper > .menu-item {
+.menu-item {
     padding-left: 1.2rem;
 }
 
@@ -204,7 +228,7 @@ img:hover {
 
 button {
     appearance: none;
-    background-color: #f59e0b;
+    background-color: #fed7aa;
     border: none;
     border-radius: 5px;
     padding: 7px 14px;
@@ -215,7 +239,6 @@ button {
 button:hover {
     background-color: #c4800b;
     color: white;
-    border: #fef3c7 1px solid;
     cursor: pointer;
 }
 
@@ -225,18 +248,10 @@ button:active {
     box-shadow: 0 0 1px gray;
 }
 
-/* The hardest part */
-.content-body {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr;
-    background-color: white;
-}
-
 .tasks-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: minmax(220px, 1fr) minmax(220px, 1fr) minmax(220px, 1fr);
     gap: 30px;
     padding: 0 2rem;
 }
@@ -304,7 +319,7 @@ button:active {
 .notice-board {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.75fr 5fr 1fr 5fr;
+    grid-template-rows: 0.75fr 5fr 0.75fr 5fr 3fr;
 }
 
 
@@ -312,9 +327,11 @@ button:active {
     grid-area: 2 / 1 / 3 / 2;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
     padding: 0.3rem 0.5rem;
+    margin-right: 2rem;
     border: 1px solid gainsboro;
+    border-radius: 5px;
 }
 
 .read-more {
@@ -345,4 +362,65 @@ button:active {
 
 .event-container > div{
     font-size: 0.75rem;
+}
+
+.event:hover {
+    background-color: #fff7ed;
+}
+
+#top-performer {
+    color: rgb(133, 113, 0);
+    animation: blink 3s step-end infinite;
+    opacity: 0.5;
+}
+
+@keyframes blink {
+    from, to { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+#top-performer:hover {
+    cursor: help;
+}
+
+.learning-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 0.3rem 0.5rem;
+    margin-right: 2rem;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+
+.teacher {
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+    font-weight: 700;
+}
+
+.lesson{
+    font-size: 0.75rem;
+}
+
+.lesson-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gainsboro;
+}
+
+.lesson-container img {
+    margin-left: 1rem;
+}
+
+.teacher-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+.teacher-container:hover {
+    background-color: #fff7ed;
+    cursor: pointer;
 }
