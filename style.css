@@ -111,6 +111,7 @@ svg:active {
 
 .menu-bottom {
     grid-area: 3 / 1 / 4 / 2;
+    padding-top: 4rem;
 }
 
 .header-top {
@@ -250,8 +251,8 @@ button:active {
 
 .tasks-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-template-rows: minmax(220px, 1fr) minmax(220px, 1fr) minmax(220px, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr);
     gap: 30px;
     padding: 0 2rem;
 }
@@ -319,7 +320,7 @@ button:active {
 .notice-board {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.75fr 5fr 0.75fr 5fr 3fr;
+    grid-template-rows: 0.75fr 5fr 0.75fr 4fr;
 }
 
 
@@ -391,6 +392,7 @@ button:active {
     margin-right: 2rem;
     border: 1px solid gainsboro;
     border-radius: 5px;
+    margin-bottom: 3rem;
 }
 
 .teacher {
