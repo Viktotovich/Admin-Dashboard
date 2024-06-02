@@ -64,6 +64,10 @@ body {
     fill: #b8790c ;
 }
 
+.menu-svg-wrapper:active {
+    opacity: 70%;
+}
+
 .menu-svg-wrapper > .menu-item {
     padding-left: 1.2rem;
 }
@@ -71,6 +75,10 @@ body {
 svg {
     max-width: 30px;
     max-height: 30px;
+}
+
+svg:active {
+    opacity: 50%;
 }
 
 .menu-top {
@@ -227,7 +235,7 @@ button:active {
 
 .tasks-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     grid-template-rows: 1fr 1fr 1fr;
     gap: 30px;
     padding: 0 2rem;
@@ -271,6 +279,70 @@ button:active {
     }
 }
 
+.task-actions {
+    --hover-fill: green;
+}
+
+.task-actions svg:hover{
+    fill: var(--hover-fill);
+    cursor: pointer;
+}
+
+.task-actions svg:nth-child(2){
+    --hover-fill: orange;
+}
+
+.task-actions svg:nth-child(3){
+    --hover-fill: grey;
+}
+
 .main-content h3 {
     padding-left: 2rem;
+}
+
+/* Events */
+.notice-board {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.75fr 5fr 1fr 5fr;
+}
+
+
+.events-section {
+    grid-area: 2 / 1 / 3 / 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid gainsboro;
+}
+
+.read-more {
+    font-weight: 700;
+    padding: 0.4rem 0;
+}
+
+.read-more:hover {
+    cursor: pointer;
+    color: #35465e;
+}
+
+.read-more:active {
+    color: #5c718d;
+}
+
+.line-end {
+    width: 70%;
+    border-bottom: rgb(136, 134, 134) 1px solid;
+    justify-self: center;
+    margin: 0 auto;
+}
+
+.event-container > h4{
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+}
+
+.event-container > div{
+    font-size: 0.75rem;
 }
